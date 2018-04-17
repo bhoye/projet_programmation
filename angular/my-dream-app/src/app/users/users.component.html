@@ -1,0 +1,28 @@
+<div class="contair text-center spaser">
+	<div clas="card-primary">
+		<div class="card-header">
+			<h2>Liste des employés</h2>
+		</div>
+		<div class="card-body">
+			<table class="table table-striped">
+				<tr>
+					<th>ID</th>
+					<th>NAME</th>
+					<th>USERNAME</th>
+					<th>EMAIL</th>
+					<th>ACTION</th>
+				</tr>
+				<tr *ngFor="let user of users">
+					<td>{{user.id}}</td>
+					<td>{{user.name}}</td>
+					<td>{{user.username}}</td>
+					<td>{{user.email}}</td>
+					<td><button class="btn btn-danger" (click)="deleteUser(user)">Supprimer</button></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
